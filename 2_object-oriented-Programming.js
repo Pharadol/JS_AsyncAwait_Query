@@ -111,9 +111,9 @@ class BaseStatus {
       `${this.name}[${this.baseClass}] atk ${target.name}[${target.baseClass}]`
     );
     if (target.baseClass == "Tank" && Math.random() < target.chanceSkill) {
-      target.hp += (this.atk*0.7);
+      target.hp += this.atk * 0.7;
       console.log(
-        `+++ Healing ${target.name}[${target.baseClass}] + ${this.atk*0.7}HP`
+        `+++ Healing ${target.name}[${target.baseClass}] + ${this.atk * 0.7}HP`
       );
     } else if (
       target.baseClass == "Hunter" &&
@@ -143,7 +143,8 @@ class BaseStatus {
   }
 }
 
-class Tank extends BaseStatus { // extends : defige new value of the class but canuse methods
+class Tank extends BaseStatus {
+  // extends : defige new value of the class but canuse methods
   baseClass = "Tank";
   hp = 200;
   ap = 20;
@@ -174,3 +175,55 @@ function B_atk_A() {
   b.attack(a);
   showStat();
 }
+
+//* ------------------------------------Blinding
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = "food";
+}
+
+let food = new Food("cheese", 5);
+console.log(food.name);
+console.log(food.price);
+console.log(food.category);
+
+// class Product {
+//   constructor(name, price) {
+//     this.name = name
+//     this.price = price
+//   }
+// }
+
+// class Food extends Product {
+//   category = 'food'
+// }
+
+// class Electornic extends Product {
+//   category = 'elctornic'
+// }
+
+// let food = new Food('cheese', 30)
+// console.log(food.name)
+// console.log(food.price)
+// console.log(food.category)
+
+let student = {
+  name: "John",
+  grade: 3.5,
+  showInfo() {
+    console.log(`${this.name} Grade: ${this.grade}`);
+  },
+};
+setTimeout(student.showInfo, 2000); // not work : การ binding หายไปแล้ว
+setTimeout(student.showInfo.bind(student), 2000); // ต้องใช้แบบนี้แทน method สูญเสียตัวเองได้ถ้าส่งcallback ไปโดยได้ .bind ตัวมันเอง
+
+  //functon: eg handle
+  //method: showInfo ที่อยู่ภายใต้ student
+let handle = student.showInfo.bind(student)
+
+setTimeout(handle, 2000);
