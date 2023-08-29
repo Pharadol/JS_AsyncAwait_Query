@@ -137,8 +137,8 @@ try {
 function isNumberCallback(n, cb) {
   if (typeof n !== "number") {
     return cb(new Error("isNumCallback: Not a number"));
-    }
-    return cb()
+  }
+  return cb();
 }
 
 isNumberCallback("1", (err) => {
@@ -147,21 +147,49 @@ isNumberCallback("1", (err) => {
 
 // change isNumber => promise
 async function isNumberAsync(n) {
-    return new Promise((resolve, reject) => {
-        if (typeof n !== 'number') {
-            return reject('isNumPromise: not a number')
-        }
-        return resolve('isNumPromise: Number!!')
-    })
+  return new Promise((resolve, reject) => {
+    if (typeof n !== "number") {
+      return reject("isNumPromise: not a number");
+    }
+    return resolve("isNumPromise: Number!!");
+  });
 }
 
-isNumberAsync(1).then(console.log).catch(console.log)
+isNumberAsync(1).then(console.log).catch(console.log);
 
 async function runIsNumber() {
-    try {
-        await isNumberAsync('1')
-    } catch (err) {
-        console.log(err);
-    }
+  try {
+    await isNumberAsync("1");
+  } catch (err) {
+    console.log(err);
+  }
 }
-runIsNumber()
+runIsNumber();
+
+//* ----------------------- Promise methods
+function getData(url) {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then((response) => response.json())
+      .then(resolve)
+      .catch(reject);
+  });
+}
+let url = [
+  getData("https://reqres.in/api/users/1?delay=3"),
+  getData("https://reqres.in/api/users/2?delay=1"),
+  getData("https://reqres.in/api/users/3"),
+  getData("https://reqres.in/api/users/4??delay=4"),
+  getData("https://burh"),
+];
+async function runGetData() {
+  let resultRace = await Promise.race(url); //get fastest
+  console.log("----------- Promise methods Race", resultRace);
+  let resultAny = await Promise.any(url); //คล้าย race แต่ไมสน err
+  console.log("----------- Promise methods Any", resultAny);
+  let resultAllSettled = await Promise.allSettled(url); //run all แต่ไม่ได้สนใจว่าตัวไหนจะใช้งานได้ ไม่ได้ ถ้าอันไหนได้ก็เอามาเลย
+  console.log("----------- Promise methods Allsettled", resultAllSettled);
+  let resultAll = await Promise.all(url); // run all ก่อนค่อย...(all must work)
+  console.log("----------- Promise methods All", resultAll);
+}
+runGetData();
