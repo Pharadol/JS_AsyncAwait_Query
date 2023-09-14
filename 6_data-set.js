@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //     callIframe(event.target.dataset.href);
 //     console.log(event.target.dataset.href);
 //   });
-
+  
   function callIframe(link) {
     iframe.setAttribute("src", link);
   }
