@@ -12,8 +12,34 @@
     <!-- <script src="/5_dom.js"></script> -->
     <!-- <script src="/6_data-set.js"></script> -->
     <!-- <script src="7_node-element-js.js"></script> --> 
-
-    <script src="8_method_and_utilities.js"></script>
+    <!-- <script src="8_method_and_utilities.js"></script> -->
+    <style>
+        #area-test {
+            width: fit-content;
+            width: 540px;
+            height: 200px;
+            color: #fff;
+            cursor: pointer;
+            text-align: center;
+            user-select: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ready {
+            background-color: rgb(101, 180, 180);
+        }
+        .start {
+            background-color: rgb(218, 115, 47);
+        }
+        .click {
+            background-color: rgb(23, 189, 111);
+        }
+        .cheat {
+            background-color: rgb(150, 43, 43);
+        }
+    </style>
 </head>
 <body>
     <!-- 2_oop  -->
@@ -44,5 +70,16 @@
     <input id="exchangeCurrency" type="text">
     <p id="exchangeResult"></p>
     <p id="lottery">lottery = </p>
+    <!-- 9_date-time -->
+    Distance time 
+    <input id="date1" type="date">
+    <input id="date2" type="date">
+    <p>เวลาต่างกัน : <span id="distance-time">0</span> วัน</p>
+    Test Reaction time
+    <div id="area-test" class="ready">
+        When the orange box turns green, click quickly as you can.<br>
+        Click to start.
+    </div>
 </body>
+<script src="9_date-time.js"></script>
 </html>
