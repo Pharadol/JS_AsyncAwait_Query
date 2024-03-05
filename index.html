@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <!-- <script src="/1_error-handler.js"></script> -->
@@ -11,85 +11,137 @@
     <!-- <script src="/4_promise_async-await.js"></script> -->
     <!-- <script src="/5_dom.js"></script> -->
     <!-- <script src="/6_data-set.js"></script> -->
-    <!-- <script src="7_node-element-js.js"></script> --> 
+    <!-- <script src="7_node-element-js.js"></script> -->
     <!-- <script src="8_method_and_utilities.js"></script> -->
     <style>
-        #area-test {
-            width: fit-content;
-            width: 540px;
-            height: 200px;
-            color: #fff;
-            cursor: pointer;
-            text-align: center;
-            user-select: none;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .ready {
-            background-color: rgb(101, 180, 180);
-        }
-        .start {
-            background-color: rgb(218, 115, 47);
-        }
-        .click {
-            background-color: rgb(23, 189, 111);
-        }
-        .cheat {
-            background-color: rgb(150, 43, 43);
-        }
+      #area-test {
+        width: fit-content;
+        width: 540px;
+        height: 200px;
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+        user-select: none;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ready {
+        background-color: rgb(101, 180, 180);
+      }
+      .start {
+        background-color: rgb(218, 115, 47);
+      }
+      .click {
+        background-color: rgb(23, 189, 111);
+      }
+      .cheat {
+        background-color: rgb(150, 43, 43);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 2_oop  -->
     <button onclick="A_atk_B()">A attack B</button>
-    <br><br><br>
+    <br /><br /><br />
     <button onclick="B_atk_A()">B attack A</button>
     <!-- 5_dom -->
     <h1 id="result">...</h1>
     <button id="change">Click me</button>
     <button id="clear">clear me</button>
-    <br>
-    <input type="input" id="myInput">
-    <br><br>
-    <div id="outside" style="width: 100px; height: 100px; background-color: rgb(94, 184, 154); display: flex; justify-content: center; align-items: center; overflow: hidden;">
-    <div id="inside" style="width: 50px; height: 50px; background-color: antiquewhite;"></div></div>
+    <br />
+    <input type="input" id="myInput" />
+    <br /><br />
+    <div
+      id="outside"
+      style="
+        width: 100px;
+        height: 100px;
+        background-color: rgb(94, 184, 154);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      "
+    >
+      <div
+        id="inside"
+        style="width: 50px; height: 50px; background-color: antiquewhite"
+      ></div>
+    </div>
     <!-- 6_data-set -->
     <div id="data-set" data-primary data-first-row data-count="50"></div>
     <a id="example-link" href="#" data-href="http://example.com">example</a>
-    <a id="wiki-link" href="#" data-href="https://wikipedia.org">wiki</a><br>
-    <a id="yt-embed-link" href="#" data-href="https://www.youtube.com/embed/jfKfPfyJRdk">youtube-embed</a><br>
-    <iframe id="iframe-area" src="" width="1057" height="595" title="lofi hip hop radio 📚 - beats to relax/study to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <a id="wiki-link" href="#" data-href="https://wikipedia.org">wiki</a><br />
+    <a
+      id="yt-embed-link"
+      href="#"
+      data-href="https://www.youtube.com/embed/jfKfPfyJRdk"
+      >youtube-embed</a
+    ><br />
+    <iframe
+      id="iframe-area"
+      src=""
+      width="1057"
+      height="595"
+      title="lofi hip hop radio 📚 - beats to relax/study to"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
     <!-- 7_node-element-js -->
-    <div id="outside_2" style="background-color: yellow; width: 300px; height: 300px; display: flex; justify-content: space-around;">
-        <div class="inside" style="background-color: pink; width:20px; height: 20px;"></div>
+    <div
+      id="outside_2"
+      style="
+        background-color: yellow;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: space-around;
+      "
+    >
+      <div
+        class="inside"
+        style="background-color: pink; width: 20px; height: 20px"
+      ></div>
     </div>
     <!-- 8_method_and_utilities -->
     <h3>Currency Exchange</h3>
-    <input id="exchangeCurrency" type="text">
+    <input id="exchangeCurrency" type="text" />
     <p id="exchangeResult"></p>
-    <p id="lottery">lottery = </p>
+    <p id="lottery">lottery =</p>
     <!-- 9_date-time -->
-    Distance time 
-    <input id="date1" type="date">
-    <input id="date2" type="date">
+    Distance time
+    <input id="date1" type="date" />
+    <input id="date2" type="date" />
     <p>เวลาต่างกัน : <span id="distance-time">0</span> วัน</p>
     Test Reaction time
     <div id="area-test" class="ready">
-        When the orange box turns green, click quickly as you can.<br>
-        Click to start.
+      When the orange box turns green, click quickly as you can.<br />
+      Click to start.
     </div>
     <!-- 10_url -->
     Send data through url
     <form id="calc">
-        <input id="n1" type="number">
-        <input id="n2" type="number">
-        <button>Calculate</button>
+      <input id="n1" type="number" />
+      <input id="n2" type="number" />
+      <button>Calculate</button>
     </form>
     <p>Result: <span id="resultCalc">0</span></p>
-</body>
+    <!-- 11_file-reader -->
+    Choose your .txt file
+    <input type="file" id="file" accept=".txt" multiple />
+    <textarea id="resultFile" cols="30" rows="5" readonly></textarea> <br />
+    Choose your img file
+    <img id="resultFileImg" />
+    <input type="file" id="inputImg" />
+    Practies
+    <input type="file" id="file2" accept=".txt" multiple />
+    <textarea id="resultFile2" cols="30" rows="5" readonly></textarea> <br />
+  </body>
 
-<!-- <script src="9_date-time.js"></script> -->
-<script src="10_url.js"></script>
+  <!-- <script src="9_date-time.js"></script> -->
+  <!-- <script src="10_url.js"></script> -->
+  <script src="11_file-reader.js"></script>
 </html>
