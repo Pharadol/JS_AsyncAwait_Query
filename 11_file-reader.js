@@ -43,17 +43,18 @@ function readText(file) {
   return new Promise((resolve, reject) => {
     let reader = new FileReader();
     reader.onload = (event) => {
-      // event.target.result
+      console.log(event.target.result);
+      resolve(event.target.result)
     };
     reader.onerror = reject;
     reader.readAsText(file);
   });
 }
 
-file.addEventListener("input", async (e) => {
+file2.addEventListener("input", async (e) => {
   let file = e.target.files[0];
   if (!file) {
     return;
   }
-  result.innerText = await readText(file);
+  result2.innerText = await readText(file);
 });
