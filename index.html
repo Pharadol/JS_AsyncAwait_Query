@@ -139,9 +139,46 @@
     Practies
     <input type="file" id="file2" accept=".txt" multiple />
     <textarea id="resultFile2" cols="30" rows="5" readonly></textarea> <br />
+    <!-- 12_fetch -->
+    <h3>Fake API</h3>
+    <form id="getData">
+      <div>
+        <label
+          >Locale :
+          <select name="locale">
+            <option value="en_US">English</option>
+            <!-- <option value="th_TH">Thai</option> -->
+          </select>
+        </label>
+      </div>
+      <div>
+        <label
+          >Quantity :
+          <input type="number" name="quantity" value="5" max="50"/>
+        </label>
+      </div>
+      <div>
+        Gender :
+        <label>
+          <input type="radio" name="gender" value="all" checked />
+          All
+        </label>
+        <label>
+          <input type="radio" name="gender" value="male" />
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female" />
+          FeMale
+        </label>
+      </div>
+      <button>Get data</button>
+    </form>
+    <ul id="resultPerson"></ul>
   </body>
 
   <!-- <script src="9_date-time.js"></script> -->
   <!-- <script src="10_url.js"></script> -->
-  <script src="11_file-reader.js"></script>
+  <!-- <script src="11_file-reader.js"></script> -->
+  <script src="12_fetch.js"></script>
 </html>
