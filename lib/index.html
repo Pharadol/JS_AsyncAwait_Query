@@ -13,6 +13,7 @@
     <script defer src="script/echarts.js"></script>
     <script defer src="script/data-tale-vanilla.js"></script>
     <script defer src="script/quill-rich-text-editor.js"></script>
+    <script defer src="script/swiper.js"></script>
   </head>
   <body>
     <!-- Lodash  -->
@@ -112,6 +113,25 @@
       <button>Save</button>
       <button id="clear" type="button">Clear</button>
     </form>
+    <!-- swiper  -->
+    <div class="swiper mySwiper" style="width: 600px; height: 300px">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/pexels-laura.jpg" />
+        </div>
+        <div class="swiper-slide"><img src="img/pexels-laura.jpg" /></div>
+        <div class="swiper-slide"><img src="img/pexels-laura.jpg" /></div>
+        <div class="swiper-slide"><img src="img/pexels-laura.jpg" /></div>
+        <div class="swiper-slide"><img src="img/pexels-laura.jpg" /></div>
+        <div class="swiper-slide"><img src="img/pexels-laura.jpg" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-scrollbar"></div>
+    </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
@@ -174,6 +194,14 @@
     src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js"
     type="text/javascript"
   ></script>
-  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.snow.css" rel="stylesheet" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.snow.css"
+    rel="stylesheet"
+  />
   <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </html>
