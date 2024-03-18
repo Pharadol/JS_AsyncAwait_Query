@@ -12,6 +12,7 @@
     <script defer src="script/sweetalert2.js"></script>
     <script defer src="script/echarts.js"></script>
     <script defer src="script/data-tale-vanilla.js"></script>
+    <script defer src="script/quill-rich-text-editor.js"></script>
   </head>
   <body>
     <!-- Lodash  -->
@@ -105,6 +106,12 @@
         </tr>
       </tbody> -->
     </table>
+    <!-- quill rich text editor  -->
+    <form>
+      <div id="editor"></div>
+      <button>Save</button>
+      <button id="clear" type="button">Clear</button>
+    </form>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
@@ -167,4 +174,6 @@
     src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js"
     type="text/javascript"
   ></script>
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.snow.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.js"></script>
 </html>
