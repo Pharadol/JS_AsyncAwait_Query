@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn Libraries Javascript</title>
+    <!-- <script defer src="script/lodash.js"></script> -->
+    <!-- <script defer src="script/numeral.js"></script> -->
+    <!-- <script defer src="script/luxon.js"></script> -->
     <script defer src="script/vanilla-lazyload.js"></script>
+    <script defer src="script/nprogress.js"></script>
+    <script defer src="script/sweetalert2.js"></script>
+    <script defer src="script/echarts.js"></script>
   </head>
   <body>
     <!-- Lodash  -->
@@ -23,7 +29,21 @@
     <!-- NProgress  -->
     <button id="load-data">load data</button>
     <textarea id="area-data" readonly cols="20" rows="10"></textarea>
+    <!-- sweetalert2  -->
+    <button id="alert">Alert!!</button>
+    <img
+      class="lazy"
+      id="img-alert"
+      style="max-width: 100px; cursor: pointer"
+      data-src="./img/pexels-laura.jpg"
+      alt=""
+    />
+    <!-- echarts -->
+    <div id="mainChart" style="width: 600px; height: 400px;"></div>
+    covid chart
+    <div id="covidChart" style="width: 600px; height: 400px;"></div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"
@@ -43,11 +63,36 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" integrity="sha512-bUg5gaqBVaXIJNuebamJ6uex//mjxPk8kljQTdM1SwkNrQD7pjS+PerntUSD+QRWPNJ0tq54/x4zRV8bLrLhZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" integrity="sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- <script src="script/lodash.js"></script> -->
-  <!-- <script src="script/numeral.js"></script> -->
-  <!-- <script src="script/luxon.js"></script> -->
-  <script src="script/nprogress.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"
+    integrity="sha512-bUg5gaqBVaXIJNuebamJ6uex//mjxPk8kljQTdM1SwkNrQD7pjS+PerntUSD+QRWPNJ0tq54/x4zRV8bLrLhZg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"
+    integrity="sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.6/sweetalert2.all.min.js"
+    integrity="sha512-wxqGjAncUDpYXzOA/WDPKAAbmSCJhJ0BqHJs/4h6L2y9xiXboIfNIelPtshy0IWjWott9TRy2pQfdPY+grMRWw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.6/sweetalert2.min.css"
+    integrity="sha512-OWGg8FcHstyYFwtjfkiCoYHW2hG3PDWwdtczPAPUcETobBJOVCouKig8rqED0NMLcT9GtE4jw6IT1CSrwY87uw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"
+    integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
 </html>
