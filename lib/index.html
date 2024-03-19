@@ -16,8 +16,9 @@
     <script defer src="script/swiper.js"></script>
     <script defer src="script/tipppy.js"></script>
     <script defer src="script/masonry.js"></script>
+    <script defer src="script/sample-parallax.js"></script>
   </head>
-  <body>
+  <body style="margin: 0">
     <!-- Lodash  -->
     <textarea id="typeToSave" cols="10" rows="2"></textarea>
     <!-- Nummeral  -->
@@ -44,9 +45,9 @@
       alt=""
     />
     <!-- echarts -->
-    <div id="mainChart" style="width: 600px; height: 400px"></div>
+    <div id="mainChart" style="width: 600px; width: 200px"></div>
     covid chart
-    <div id="covidChart" style="width: 600px; height: 400px"></div>
+    <div id="covidChart" style="width: 600px; width: 200px"></div>
     <!-- data table vanilla  -->
     <table id="myTable">
       <!-- <thead>
@@ -110,7 +111,7 @@
       </tbody> -->
     </table>
     <!-- quill rich text editor  -->
-    <form>
+    <form id="rich-form">
       <div id="editor"></div>
       <button>Save</button>
       <button id="clear" type="button">Clear</button>
@@ -140,14 +141,54 @@
     <button data-tippy-content="3" class="tippyButton">Tippy Button</button>
     <!-- masonry  -->
     <div class="grid">
-      <div class="grid-item"><img src="https://images.pexels.com/photos/14219411/pexels-photo-14219411.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></div>
-      <div class="grid-item"><img src="https://images.pexels.com/photos/17847520/pexels-photo-17847520/free-photo-of-pattern-on-white-wall.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></div>
-      <div class="grid-item"><img src="https://images.pexels.com/photos/20376317/pexels-photo-20376317/free-photo-of-a-large-clock-tower-with-a-clock-on-top.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></div>
-      <div class="grid-item"><img src="https://images.pexels.com/photos/6957837/pexels-photo-6957837.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></div>
-      <div class="grid-item"><img src="https://images.pexels.com/photos/20309637/pexels-photo-20309637/free-photo-of-stockholm-metro.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></div>
-      <div class="grid-item"><img src="https://images.pexels.com/photos/20436786/pexels-photo-20436786/free-photo-of-a-snow-capped-mountain-with-purple-clouds.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/14219411/pexels-photo-14219411.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/17847520/pexels-photo-17847520/free-photo-of-pattern-on-white-wall.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/20376317/pexels-photo-20376317/free-photo-of-a-large-clock-tower-with-a-clock-on-top.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/6957837/pexels-photo-6957837.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/20309637/pexels-photo-20309637/free-photo-of-stockholm-metro.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+          alt=""
+        />
+      </div>
+      <div class="grid-item">
+        <img
+          src="https://images.pexels.com/photos/20436786/pexels-photo-20436786/free-photo-of-a-snow-capped-mountain-with-purple-clouds.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+          alt=""
+        />
+      </div>
     </div>
+    <!-- Sample Paralax  -->
+    <h3>SimpleParallax</h3>
+    <!-- <section style="height: 300px; background-color: gray"></section> -->
+    <img
+      class="thumbnail"
+      style="height: 600px"
+      src="https://images.pexels.com/photos/20436786/pexels-photo-20436786/free-photo-of-a-snow-capped-mountain-with-purple-clouds.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+      alt=""
+    />
   </body>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
   <script
@@ -222,4 +263,5 @@
   <script src="https://unpkg.com/popper.js@1"></script>
   <script src="https://unpkg.com/tippy.js@5"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 </html>
